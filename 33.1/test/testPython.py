@@ -41,7 +41,34 @@ info = {
 }
 
 info["recorrente"] = "sim"
+del info["origem"]
 
 print(info)
 
 # =========================================================
+
+initialNumber = 5
+counter = 1
+result = 1
+
+while counter <= initialNumber:
+    result = result * counter
+    counter += 1
+
+print(result)
+
+# =========================================================
+
+ratings = [6, 8, 5, 9, 10]
+
+finalEvaluation = [x * 10 for x in ratings]
+
+print(finalEvaluation)
+
+
+# =========================================================
+
+
+for rating in ratings:
+    if (rating % 3) == 0:
+        print(f'{rating} é multiplo de 3!')
