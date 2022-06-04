@@ -1,5 +1,5 @@
 
-received_name = input('Digite seu primeiro nome (ou o seu nome social ):')
+received_name = input('Digite seu primeiro nome (ou o seu nome social 🦜):')
 
 
 for letter in received_name:
