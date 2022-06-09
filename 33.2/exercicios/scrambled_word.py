@@ -1,15 +1,10 @@
 import random
 
-PALAVRAS = [
-  "mosca",
-  "urubu",
-  "sereia",
-  "piranha",
-  "dragão",
-  "pirata",
-  "elefante",
-  "juliette",
-]
+def get_words(path):
+    with open(path) as file:
+        words = [word.strip() for word in file]
+    return words
+
 
 MAX_ATTEMPTS = 3
 
@@ -32,7 +27,8 @@ def check_game_result(secret_word, guesses):
         print(f"You lose: {secret_word}")
 
 if __name__ == "__main__":
-    secret_word, scrambled_word = draw_secret_word(PALAVRAS)
+    words = get_words('words.txt')
+    secret_word, scrambled_word = draw_secret_word(words)
     print(f"Scrambled word is {scrambled_word}")
     guesses = collect_guesses()
     check_game_result(secret_word, guesses)
